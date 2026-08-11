@@ -1,0 +1,6 @@
+node_modules/
+.env
+anzak.db
+anzak.db-*
+uploads/*
+!uploads/.gitkeep

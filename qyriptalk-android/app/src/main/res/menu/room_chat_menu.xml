@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_room_info"
+        android:title="Oda Bilgisi"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_manage_members"
+        android:title="Üyeleri Yönet"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_mute_room"
+        android:title="Bildirimleri Sessize Al"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_clear_room_chat"
+        android:title="Sohbeti Temizle"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_leave_room"
+        android:title="Odadan Ayrıl"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="26dp"
+        android:paddingBottom="20dp">
+
+        <!-- Avatar -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/profile_avatar"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bg_avatar_large"
+                android:gravity="center"
+                android:text="?"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/profile_avatar_photo"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="@null" />
+
+            <ImageButton
+                android:id="@+id/profile_avatar_edit_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/bg_round_button_flat"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_edit" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/profile_role_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_role_badge"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:letterSpacing="0.04"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="Yönetici"
+            tools:visibility="visible" />
+
+        <!-- Kullanıcı adı -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_dark"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:maxWidth="220dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="xadan" />
+
+            <ImageButton
+                android:id="@+id/profile_edit_username_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_round_button_flat"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <!-- UID -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/profile_uid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                tools:text="UID: aB12cD34" />
+
+            <TextView
+                android:id="@+id/profile_copy_uid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:padding="4dp"
+                android:text="Kopyala"
+                android:textColor="@color/qyrip_accent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <!-- Hakkımda -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="HAKKIMDA"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_switch_row"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/profile_bio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                tools:text="Henüz bir açıklama eklenmedi." />
+
+            <ImageButton
+                android:id="@+id/profile_edit_bio_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_round_button_flat"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <!-- Bildirimler -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="BİLDİRİMLER"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_switch_row"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mesaj bildirimleri"
+                    android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/profile_switch_message_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/qyrip_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bildirim sesi"
+                    android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/profile_switch_sound_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profile_logout_button"
+            style="@style/Widget.AnzakChat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:backgroundTint="@color/qyrip_danger"
+            android:text="Çıkış Yap"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</ScrollView>

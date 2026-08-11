@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/qyrip_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        android:background="@color/qyrip_primary"
+        android:elevation="4dp"
+        app:title="Sohbet"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="@drawable/ic_back">
+
+        <ImageButton
+            android:id="@+id/chat_menu_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_overflow_menu"
+            android:contentDescription="Menü" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/typing_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:text="" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/emoji_panel"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/qyrip_surface"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="6dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/reply_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/qyrip_surface"
+        android:paddingStart="14dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="30dp"
+            android:background="@color/qyrip_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reply_bar_sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qyrip_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="ahmet"
+                xmlns:tools="http://schemas.android.com/tools" />
+
+            <TextView
+                android:id="@+id/reply_bar_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Yanıtlanan mesaj önizlemesi"
+                xmlns:tools="http://schemas.android.com/tools" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/reply_bar_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Yanıtlamayı iptal et" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recording_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/qyrip_surface"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/recording_dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_recording_dot" />
+
+        <TextView
+            android:id="@+id/recording_timer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="0:00"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ses kaydediliyor... bırakınca gönderilir"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:layout_marginEnd="10dp" />
+
+        <ImageButton
+            android:id="@+id/recording_cancel"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Kaydı iptal et" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input_bar_card"
+        android:elevation="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/emoji_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="2dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_round_button_flat"
+            android:src="@drawable/ic_emoji"
+            android:contentDescription="Emoji" />
+
+        <ImageButton
+            android:id="@+id/attach_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="4dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_round_button_flat"
+            android:src="@drawable/ic_attach" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_input_field"
+            android:minHeight="46dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="6dp">
+
+            <EditText
+                android:id="@+id/message_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Mesaj yaz..."
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:textColor="@color/text_dark"
+                android:textColorHint="@color/text_muted"
+                android:textSize="15sp"
+                android:maxLines="4"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/mic_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:padding="11dp"
+            android:background="@drawable/bg_round_button"
+            android:src="@drawable/ic_mic"
+            android:contentDescription="Sesli mesaj kaydet" />
+
+        <ImageButton
+            android:id="@+id/send_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:padding="11dp"
+            android:background="@drawable/bg_round_button"
+            android:src="@drawable/ic_send" />
+
+    </LinearLayout>
+
+</LinearLayout>

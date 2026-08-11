@@ -1,0 +1,40 @@
+name: AnzakChat Android Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: qyriptalk-android
+
+    steps:
+      - name: Kodu çek
+        uses: actions/checkout@v4
+
+      - name: JDK 17 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Gradle kur ve önbellekle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Debug APK derle
+        run: gradle assembleDebug --no-daemon --stacktrace
+
+      - name: APK'yı Actions çıktısına ekle
+        uses: actions/upload-artifact@v4
+        with:
+          name: anzakchat-debug-apk
+          path: qyriptalk-android/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error

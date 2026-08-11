@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble_received"
+        android:elevation="1dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="7dp"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/message_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/qyrip_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="ahmet"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <LinearLayout
+            android:id="@+id/reply_preview_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_reply_preview"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/reply_preview_sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qyrip_primary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="ahmet"
+                xmlns:tools="http://schemas.android.com/tools" />
+
+            <TextView
+                android:id="@+id/reply_preview_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Önceki mesaj önizlemesi"
+                xmlns:tools="http://schemas.android.com/tools" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/message_voice_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/message_voice_play_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:padding="8dp"
+                android:background="@drawable/bg_round_button"
+                android:src="@drawable/ic_play"
+                android:contentDescription="Sesli mesajı oynat" />
+
+            <TextView
+                android:id="@+id/message_voice_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/text_dark"
+                android:textSize="13sp"
+                tools:text="0:12"
+                xmlns:tools="http://schemas.android.com/tools" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/message_image"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:background="@color/qyrip_bg"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_dark"
+            android:textSize="15sp"
+            android:lineSpacingExtra="1dp"
+            tools:text="Selam!"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <TextView
+            android:id="@+id/message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            tools:text="14:32"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+    </LinearLayout>
+
+</LinearLayout>

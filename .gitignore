@@ -1,0 +1,17 @@
+# --- backend ---
+anzak-server/node_modules/
+anzak-server/.env
+anzak-server/anzak.db
+anzak-server/anzak.db-*
+anzak-server/uploads/*
+!anzak-server/uploads/.gitkeep
+anzak-server/*.log
+
+# --- android ---
+qyriptalk-android/.gradle/
+qyriptalk-android/build/
+qyriptalk-android/app/build/
+qyriptalk-android/local.properties
+qyriptalk-android/.idea/
+qyriptalk-android/*.iml
+qyriptalk-android/.DS_Store

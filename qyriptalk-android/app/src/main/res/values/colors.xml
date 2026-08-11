@@ -1,0 +1,36 @@
+<resources>
+    <!-- Ana marka tonları (gri/siyah/beyaz kimliği korunuyor, modernize edildi) -->
+    <color name="qyrip_primary">#2E2E2E</color>
+    <color name="qyrip_primary_dark">#161616</color>
+    <color name="qyrip_accent">#111111</color>
+    <color name="qyrip_bg">#F4F4F5</color>
+
+    <!-- Sohbet balonları: gönderilen = koyu (yüksek kontrast), alınan = açık -->
+    <color name="bubble_sent">#1E1E1E</color>
+    <color name="bubble_sent_text">#F5F5F5</color>
+    <color name="bubble_received">#FFFFFF</color>
+
+    <color name="text_dark">#17181A</color>
+    <color name="text_muted">#7A7B80</color>
+    <color name="text_on_dark_muted">#B8B8BA</color>
+
+    <!-- Faz 3 modernizasyonu için eklenen tonlar -->
+    <color name="qyrip_surface">#FFFFFF</color>
+    <color name="qyrip_surface_alt">#F4F4F5</color>
+    <color name="qyrip_field_bg">#EFEFF1</color>
+    <color name="qyrip_divider">#EBEBED</color>
+    <color name="qyrip_online">#43A047</color>
+    <color name="qyrip_gradient_start">#2B2B2E</color>
+    <color name="qyrip_gradient_end">#0E0E0F</color>
+    <color name="qyrip_ripple_light">#14000000</color>
+    <color name="qyrip_ripple_dark">#26FFFFFF</color>
+
+    <!-- Profil/oda/DM menü geliştirmeleri için eklenen tonlar -->
+    <color name="qyrip_danger">#D64545</color>
+    <color name="qyrip_danger_dark">#B23B3B</color>
+    <color name="qyrip_warning_bg">#FFF6E5</color>
+    <color name="qyrip_warning_text">#B8790C</color>
+
+    <!-- Adaptive launcher icon arka planı -->
+    <color name="ic_launcher_background">#141313</color>
+</resources>

@@ -1,0 +1,69 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.AnzakChat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/qyrip_primary</item>
+        <item name="colorPrimaryDark">@color/qyrip_primary_dark</item>
+        <item name="colorAccent">@color/qyrip_accent</item>
+        <item name="colorSecondary">@color/qyrip_accent</item>
+        <item name="android:statusBarColor">@color/qyrip_primary_dark</item>
+        <item name="android:windowBackground">@color/qyrip_surface_alt</item>
+        <item name="materialButtonStyle">@style/Widget.AnzakChat.Button</item>
+        <item name="textInputStyle">@style/Widget.AnzakChat.TextInputLayout</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.AnzakChat.Medium</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AnzakChat.Small</item>
+        <item name="materialCardViewStyle">@style/Widget.AnzakChat.CardView</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Köşe yuvarlama sistemi: butonlar, kartlar, dialoglar, bottom sheet'ler otomatik uygulanır -->
+    <style name="ShapeAppearance.AnzakChat.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="ShapeAppearance.AnzakChat.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="Widget.AnzakChat.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="elevation">0dp</item>
+        <item name="rippleColor">@color/qyrip_ripple_dark</item>
+    </style>
+
+    <style name="Widget.AnzakChat.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/qyrip_accent</item>
+    </style>
+
+    <style name="Widget.AnzakChat.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxBackgroundColor">@color/qyrip_field_bg</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="hintTextColor">@color/text_muted</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+    </style>
+
+    <style name="Widget.AnzakChat.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">1dp</item>
+        <item name="cardBackgroundColor">@color/qyrip_surface</item>
+        <item name="rippleColor">@color/qyrip_ripple_light</item>
+    </style>
+
+    <style name="TextAppearance.AnzakChat.Title" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>

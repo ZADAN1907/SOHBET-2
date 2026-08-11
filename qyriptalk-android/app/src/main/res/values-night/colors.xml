@@ -1,0 +1,33 @@
+<resources>
+    <!-- Karanlık mod paleti: aynı gri/siyah/beyaz marka kimliği, koyu yüzeyler -->
+    <color name="qyrip_primary">#242426</color>
+    <color name="qyrip_primary_dark">#0E0E0F</color>
+    <color name="qyrip_accent">#333335</color>
+    <color name="qyrip_bg">#121212</color>
+
+    <color name="bubble_sent">#2E2E30</color>
+    <color name="bubble_sent_text">#F5F5F5</color>
+    <color name="bubble_received">#1E1E1F</color>
+
+    <color name="text_dark">#F2F2F3</color>
+    <color name="text_muted">#9A9A9E</color>
+    <color name="text_on_dark_muted">#B8B8BA</color>
+
+    <color name="qyrip_surface">#232325</color>
+    <color name="qyrip_surface_alt">#121212</color>
+    <color name="qyrip_field_bg">#2E2E31</color>
+    <color name="qyrip_divider">#2E2E30</color>
+    <color name="qyrip_online">#4CAF50</color>
+    <color name="qyrip_gradient_start">#1C1C1E</color>
+    <color name="qyrip_gradient_end">#000000</color>
+    <color name="qyrip_ripple_light">#1FFFFFFF</color>
+    <color name="qyrip_ripple_dark">#33FFFFFF</color>
+
+    <color name="qyrip_danger">#E5695E</color>
+    <color name="qyrip_danger_dark">#D64545</color>
+    <color name="qyrip_warning_bg">#2A2418</color>
+    <color name="qyrip_warning_text">#E0AC4E</color>
+
+    <!-- Adaptive launcher icon arka planı -->
+    <color name="ic_launcher_background">#141313</color>
+</resources>
